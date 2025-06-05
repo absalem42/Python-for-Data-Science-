@@ -1,7 +1,7 @@
 import sys
 
 
-def count_characters(text):
+def count_characters(text: str) -> dict[str, int]:
     """
     Count different types of characters in the given text.
 
@@ -41,7 +41,7 @@ def count_characters(text):
     return counts
 
 
-def process_input(input_args):
+def process_input(input_args: list[str]) -> str:
     """
     Processes command-line arguments or prompts the user for input.
 
@@ -67,7 +67,7 @@ def process_input(input_args):
             sys.exit(1)
 
 
-def main(args):
+def main(args: list[str]) -> None:
 
     try:
         text = process_input(args)
