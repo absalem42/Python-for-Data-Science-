@@ -6,9 +6,9 @@ import sys
 try:
     if len(sys.argv) == 1:
         exit(0)
-    assert len(sys.argv) == 2, 'more than one argument is provided'
+    assert len(sys.argv) == 2, "more than one argument is provided"
 
-    assert sys.argv[1].lstrip('-').isdigit(), 'argument is not an integer'
+    assert sys.argv[1].lstrip("-").isdigit(), "argument is not an integer"
 
     if int(sys.argv[1]) % 2 == 0:
         print("I'm Even.")
@@ -16,6 +16,4 @@ try:
         print("I'm Odd.")
 
 except AssertionError as e:
-    print(f'{AssertionError.__name__} : {e}')
-
-
+    print(f"{AssertionError.__name__} : {e}")

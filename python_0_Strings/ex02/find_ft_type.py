@@ -1,7 +1,3 @@
-
-
-
-
 # def all_thing_is_obj(object: any) -> int:
 #     print(type(object))
 #     return 42
@@ -23,8 +19,6 @@ def all_thing_is_obj(object: any) -> int:
     else:
         print("Type not found$")
     return 42
-
-
 
 
 # all_thing_is_obj(ft_list)
