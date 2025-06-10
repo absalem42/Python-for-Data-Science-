@@ -68,7 +68,12 @@ def process_input(input_args: list[str]) -> str:
 
 
 def main(args: list[str]) -> None:
+    """
+    Processes input text, counts character types, and displays the results.
 
+    Args:
+        args (list[str]): Command-line arguments [script_name, optional_text].
+    """
     try:
         text = process_input(args)
 
@@ -82,7 +87,7 @@ def main(args: list[str]) -> None:
         print(f"{counts['digits']} digits")
 
     except AssertionError as er:
-        print(AssertionError.__name__, ":", er)
+        print(AssertionError.__name__, +":", er)
 
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@
 
 ft_list = ["Hello", "tata!"]  # mutable
 ft_tuple = ("Hello", "toto!")  # immutable, unordered
-ft_set = {"Hello", "tutu!"}  # mutable and cannot have the same element, not ouders not indexed
+ft_set = {"Hello", "tutu!"}  # mutable and cannot have the same element
 ft_dict = {"Hello": "titi!"}  # mutable
 
 
