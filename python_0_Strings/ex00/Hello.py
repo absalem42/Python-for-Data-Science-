@@ -8,11 +8,11 @@ ft_dict = {"Hello": "titi!"}  # mutable
 
 ft_list[1] = "World!"
 change_t = list(ft_tuple)
-change_t[1] = "France!"
+change_t[1] = "UAE!"
 ft_tuple = tuple(change_t)
 ft_set.remove("tutu!")
-ft_set.add("Paris!")
-ft_dict["Hello"] = "42Paris!"
+ft_set.add("Abu Dhabi!")
+ft_dict["Hello"] = "42Abu Dhabi!"
 
 
 print(ft_list)
