@@ -19,9 +19,3 @@ print(ft_list)
 print(ft_tuple)
 print(ft_set)
 print(ft_dict)
-
-
-['Hello', 'World!']
-('Hello', 'France!')
-{'Hello', 'Paris!'}
-{'Hello': '42Paris!'}

@@ -90,7 +90,7 @@ def main(args: list[str]) -> None:
         print(f"{counts['digits']} digits")
 
     except AssertionError as er:
-        print(AssertionError.__name__, +":", er)
+        print(AssertionError.__name__ + ":", er)
 
 
 if __name__ == "__main__":

@@ -43,7 +43,7 @@ def main(args: list[str]) -> None:
     try:
         string_arg, length_arg = process_input(args)
         words = string_arg.split()
-        filtered_words = list(ft_filter(lambda w: len(w) > length_arg, words))
+        filtered_words = list(word for word in ft_filter(lambda w: len(w) > length_arg, words))
         print(filtered_words)
     except AssertionError as e:
         print(AssertionError.__name__ + ":", e)
