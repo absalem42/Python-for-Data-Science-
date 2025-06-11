@@ -6,7 +6,7 @@ def NULL_not_found(object: any) -> int:
     elif object.__class__ is int and object == 0:
         print(f"Zero: {object} {type(object)}")
     elif object.__class__ is str and object.__len__() == 0:
-        print(f"Empty: {type(object)}")
+        print(f"Empty:  {type(object)}")
     elif object is False:
         print(f"Fake: {object} {type(object)}")
     else:
