@@ -65,6 +65,9 @@ def process_input(input_args: list[str]) -> str:
         except EOFError:
             print("\nInput interrupted (Ctrl+D detected). Exiting...")
             sys.exit(1)
+        except KeyboardInterrupt:
+            print("\nInput interrupted (Ctrl+C detected). Exiting...")
+            sys.exit(1)
 
 
 def main(args: list[str]) -> None:
