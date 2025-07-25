@@ -4,19 +4,16 @@ import os
 
 def ft_load(path: str):
     try:
+        if not path.lower().endswith(("jpg", "jpeg")):
+            raise AssertionError("Only JPG and JPEG formats are supported.")
         img = Image.open(path)
-        print(img.format)
+        # print(img.format)
         if img.mode != 'RGB':
             img = img.convert('RGB')
         img_array = np.array(img)
-        print(img_array.shape)
+        print(f"The shape of image is: {img_array.shape}")
+        return img_array
 
-
-        print(f"Image size (width, height): {img.size}")
-        print(f"Image format: {img.format}")
-        print(f"Image mode: {img.mode}") 
-
-        print(img_array[:1, :-5, :])
         
 
         
