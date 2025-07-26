@@ -1,0 +1,1 @@
+import ft_load from  load_image
