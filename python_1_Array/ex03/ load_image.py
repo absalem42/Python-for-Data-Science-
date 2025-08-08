@@ -22,3 +22,5 @@ def ft_load(path: str):
     except Exception as e:
         print(f"An error occurred: {e}")
 
+if __name__ == "__main__":
+    ft_load("animal.jpeg")
