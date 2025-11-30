@@ -37,6 +37,11 @@ def main():
     plt.xlabel("Year")
     plt.ylabel("Population")
     plt.legend()
+    
+    # Format y-axis to show values with M suffix (millions)
+    ax = plt.gca()
+    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{x/1e6:.0f}M'))
+    
     plt.show()
 
 
