@@ -24,11 +24,11 @@ def main():
     # Select countries to compare
     country1 = "United Arab Emirates"
     country2 = "France"
-    
+
     # Filter data for both countries
     uae_data = data[data["country"] == country1]
     france_data = data[data["country"] == country2]
-    
+
     if france_data.empty or uae_data.empty:
         print("Error: Country not found in dataset")
         return
@@ -37,10 +37,16 @@ def main():
     years = data.columns[1:].astype(int)
     year_mask = (years >= 1800) & (years <= 2050)
     years = years[year_mask]
-    
+
     # Get population values and convert to numbers
-    uae_pop = [convert_population(x) for x in uae_data.iloc[0, 1:].values[year_mask]]
-    france_pop = [convert_population(x) for x in france_data.iloc[0, 1:].values[year_mask]]
+    uae_pop = [
+        convert_population(x)
+        for x in uae_data.iloc[0, 1:].values[year_mask]
+    ]
+    france_pop = [
+        convert_population(x)
+        for x in france_data.iloc[0, 1:].values[year_mask]
+    ]
 
     # Create plot
     plt.figure(figsize=(10, 6))
@@ -50,11 +56,13 @@ def main():
     plt.xlabel("Year")
     plt.ylabel("Population")
     plt.legend()
-    
+
     # Format y-axis to show values with M suffix (millions)
     ax = plt.gca()
-    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{x/1e6:.0f}M'))
-    
+    ax.yaxis.set_major_formatter(
+        plt.FuncFormatter(lambda x, p: f"{x/1e6:.0f}M")
+    )
+
     plt.show()
 
 

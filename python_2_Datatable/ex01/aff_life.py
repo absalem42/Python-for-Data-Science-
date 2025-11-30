@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def main():
     """Main function to display life expectancy data for France."""
-    data = load("../ex00/life_expectancy_years.csv")
+    data = load("life_expectancy_years.csv")
     if data is None:
         return
 
