@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def load(path: str) -> pd.DataFrame:
     """
     Loads a CSV file into a pandas DataFrame, prints its dimensions,
