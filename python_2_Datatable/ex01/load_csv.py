@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def load(path: str) -> pd.DataFrame:
+def load(path: str):
     """
     Loads a CSV file into a pandas DataFrame, prints its dimensions,
     and returns it.
@@ -14,8 +14,9 @@ def load(path: str) -> pd.DataFrame:
     """
     try:
         data = pd.read_csv(path)
-        print(f"Loading dataset of dimensions {data.shape}")
+        print(f"Data loaded with shape: {data.shape}")
         return data
 
-    except Exception:
+    except Exception as e:
+        print(f"Error: {e}")
         return None

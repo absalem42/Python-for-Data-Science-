@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 
 
 def convert_population(value):
-    """Convert population string (like '3.28M' or '400k') to number."""
+    """Convert population like '3.28M' or '400k' to a float."""
     if isinstance(value, str):
         value = value.strip()
-        if value.endswith('M'):
+        if value.endswith("M"):
             return float(value[:-1]) * 1e6
-        elif value.endswith('k'):
+        elif value.endswith("k"):
             return float(value[:-1]) * 1e3
         else:
             return float(value)
