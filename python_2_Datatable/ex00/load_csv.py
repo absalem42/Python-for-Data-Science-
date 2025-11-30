@@ -6,7 +6,7 @@ def load(path: str):
     try:
         data = pd.read_csv(path)
 
-        print("Loading dataset of dimensions ...", data.shape())
+        # print(f"Loading dataset of dimensions ... {data.shape}")
 
         return data
 
@@ -20,7 +20,7 @@ def load(path: str):
 
 
 if __name__ == "__main__":
-    load(" life_expectancy_years.csv")
+    print(load("life_expectancy_years.csv"))
     
 
 
