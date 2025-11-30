@@ -1,35 +1,20 @@
 import pandas as pd
 
+def load(path: str) -> pd.DataFrame:
+    """
+    Loads a CSV file into a pandas DataFrame, prints its dimensions,
+    and returns it.
 
+    Args:
+        path (str): The path to the CSV file.
 
-def load(path: str):
+    Returns:
+        pd.DataFrame: The loaded DataFrame.
+    """
     try:
         data = pd.read_csv(path)
-
-        # print(f"Loading dataset of dimensions ... {data.shape}")
-
+        print(f"Loading dataset of dimensions {data.shape}")
         return data
 
-    except Exception as e:
-        print(f"Error: {e}")
+    except Exception:
         return None
-
-
-
-
-
-
-if __name__ == "__main__":
-    print(load("life_expectancy_years.csv"))
-    
-
-
-
-
-
-
-
-
-
-
-# i need to write the dimensions of the data set after oepning the file 
