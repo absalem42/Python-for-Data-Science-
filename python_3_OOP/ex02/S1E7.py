@@ -42,4 +42,3 @@ class Lannister(Character):
     def create_lannister(cls, first_name, is_alive=True):
         """Create a Lannister instance using a class method."""
         return cls(first_name, is_alive)
-
